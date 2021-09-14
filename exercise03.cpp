@@ -1,8 +1,8 @@
 #include <iostream>
 
 using namespace std;
-int  box1Volume(int height, int width, int length);
-int  box2Volume(int height, int width, int length);
+int  boxVolume(int height, int width, int length);
+
 
 
 struct Box
@@ -10,7 +10,7 @@ struct Box
     int height;
     int width;
     int length;
-}box1,box2;
+}box1, box2;
 
 
 // 1. Define a structure called Box
@@ -19,13 +19,13 @@ struct Box
 // Do not change the main function
 int main() {
     Box box1, box2;
-    
+
     // 2. Create a variable called box1 of the Box structure type
     // int box1Height, box1Width, box1Length;
     // 3. Create a variable called box2 of the Box structure type
 
     // int box2Height, box2Width, box2Length;
-  
+
 
     // 4. Input the height, width, lenght of box1 and box2
     cout << "Enter Box 1 Height : ";
@@ -43,25 +43,15 @@ int main() {
     cin >> box2.length;
 
 
-   
-    int box1volume = box1Volume(box1.height, box1.width, box1.length);
-    int box2volume = box2Volume(box2.height, box2.width, box2.length);
 
     // 5. Replace the coding below to pass the Box type structure
-    int totalVolume =  box1volume +  box2volume;
-        
-    cout << "Volume of Box is " << totalVolume << endl;
+
+
+    cout << "Volume of Box is " << boxVolume(box1.height, box1.width, box1.length) + boxVolume(box2.height, box2.width, box2.length)<< endl;
 
     return 0;
 }
-int box1Volume(int height, int width, int length)
+int boxVolume(int height, int width, int length)
 {
     return height * width * length;
 }
-int box2Volume(int height, int width, int length)
-{
-    return height * width * length;
-}
-
-
-// Implement the functions here
